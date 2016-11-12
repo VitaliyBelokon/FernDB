@@ -35,6 +35,9 @@ namespace FernDB
                 "port =3306;" +
                 "password =simonbagdad;";
             MySqlConnection conn = new MySqlConnection(connStr);
+            //cmd = new MySql.Data.MySqlClient.MySqlCommand();
+
+
 
             DataTable table = new DataTable();
 
@@ -43,7 +46,7 @@ namespace FernDB
                 //Form1.WriteInfoText();
                 //InfoTextBox.Text = "Connecting to MySQL...";
                 conn.Open();
-
+                //conn.CreateCommand("");
                 table = conn.GetSchema("MetaDataCollections");
                 //DataTable table = conn.GetSchema("UDF");
                 //DisplayData(table);

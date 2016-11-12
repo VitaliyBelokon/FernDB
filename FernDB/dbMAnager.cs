@@ -10,18 +10,24 @@ using System.Windows.Forms;
 
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Google.ProtocolBuffers;
+using MySqlX.XDevAPI;
+using MySqlX;
 
 namespace FernDB
 {
-    public partial class Form1 : Form
+    public partial class dbMAnager : Form
     {
-        public Form1()
+        public dbMAnager()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
+
             // DBConnector.
             string connStr = 
                 "server=localhost;" +
@@ -29,19 +35,25 @@ namespace FernDB
                 "database=world;" +
                 "port =3306;" + 
                 "password =simonbagdad;";
-            MySqlConnection mySqlConnection = new MySqlConnection(connStr);
+            MySqlConnection SqlConnection = new MySqlConnection(connStr);
+            MySqlCommand SqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
+
+            SqlCommand.Connection = SqlConnection;
+             
             DataTable table = new DataTable();
 
             try
             {
                 InfoTextBox.Text = "Connecting to MySQL...";
-                mySqlConnection.Open();
+                SqlConnection.Open();
 
-                table = mySqlConnection.GetSchema("MetaDataCollections");
+                table = SqlConnection.GetSchema("MetaDataCollections");
+              //  SqlCommand.CommandText = "use database vbsdb;" +
+                //    "CREATE TABLE  cs_table (id int(4))";
                 //DataTable table = conn.GetSchema("UDF");
-                //DisplayData(table);
+               // DisplayData(table);
 
-                mySqlConnection.Close();
+                SqlConnection.Close();
             }
             catch (Exception ex)
             {
@@ -49,9 +61,9 @@ namespace FernDB
             }
             InfoTextBox.Text = "Done.";
 
-            /*
+           
             //DataTable table = new DataTable();
-
+            /*
             // Declare DataColumn and DataRow variables.
             DataColumn column;
             DataRow row;
@@ -78,8 +90,11 @@ namespace FernDB
                 table.Rows.Add(row);
             }
             */
+
+
             // Set to DataGrid.DataSource property to the table.
             dataGridView1.DataSource = table;
+
         }
 
         public void WriteInfotext(string tb_text)
