@@ -29,7 +29,7 @@ namespace FernDB
             string connStr = 
                 "server=localhost;" +
                 "user=root;" +
-                "database=world;" +
+                "database=ferndb;" +
                 "port =3306;" + 
                 "password =simonbagdad00;";
             MySqlConnection sqlConnection = new MySqlConnection(connStr);
