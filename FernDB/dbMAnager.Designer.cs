@@ -51,13 +51,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(244, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(12, 16);
+            this.label2.Size = new System.Drawing.Size(15, 16);
             this.label2.TabIndex = 3;
-            this.label2.Text = ":";
+            this.label2.Text = "x";
             // 
             // button1
             // 
@@ -72,15 +72,15 @@
             // 
             // InfoTextBox
             // 
-            this.InfoTextBox.Location = new System.Drawing.Point(-3, 368);
+            this.InfoTextBox.Location = new System.Drawing.Point(-3, 441);
             this.InfoTextBox.Name = "InfoTextBox";
-            this.InfoTextBox.Size = new System.Drawing.Size(533, 20);
+            this.InfoTextBox.Size = new System.Drawing.Size(694, 20);
             this.InfoTextBox.TabIndex = 5;
             // 
             // dataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -88,7 +88,7 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.Location = new System.Drawing.Point(-3, 50);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(533, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(694, 385);
             this.dataGridView1.TabIndex = 6;
             // 
             // textBox1
@@ -101,22 +101,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(101, 30);
+            this.label1.Location = new System.Drawing.Point(58, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 16);
+            this.label1.Size = new System.Drawing.Size(81, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Table size";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(56, 7);
+            this.label3.Location = new System.Drawing.Point(12, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
+            this.label3.Size = new System.Drawing.Size(127, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Connection string";
             // 
@@ -124,7 +124,7 @@
             // 
             this.tConnectionString.Location = new System.Drawing.Point(160, 3);
             this.tConnectionString.Name = "tConnectionString";
-            this.tConnectionString.Size = new System.Drawing.Size(358, 20);
+            this.tConnectionString.Size = new System.Drawing.Size(397, 20);
             this.tConnectionString.TabIndex = 7;
             this.tConnectionString.Text = "server=localhost; user=root; database=ferndb; port=3306; password=simonbagdad;";
             // 

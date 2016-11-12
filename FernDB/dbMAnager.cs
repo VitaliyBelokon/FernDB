@@ -10,9 +10,6 @@ using System.Windows.Forms;
 
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using Google.ProtocolBuffers;
-using MySqlX.XDevAPI;
-using MySqlX;
 
 namespace FernDB
 {
@@ -34,26 +31,29 @@ namespace FernDB
                 "user=root;" +
                 "database=world;" +
                 "port =3306;" + 
-                "password =simonbagdad;";
-            MySqlConnection SqlConnection = new MySqlConnection(connStr);
-            MySqlCommand SqlCommand = new MySql.Data.MySqlClient.MySqlCommand();
-
-            SqlCommand.Connection = SqlConnection;
-             
+                "password =simonbagdad00;";
+            MySqlConnection sqlConnection = new MySqlConnection(connStr);
             DataTable table = new DataTable();
 
             try
             {
                 InfoTextBox.Text = "Connecting to MySQL...";
-                SqlConnection.Open();
+                sqlConnection.Open();
+                table = sqlConnection.GetSchema("MetaDataCollections");
 
-                table = SqlConnection.GetSchema("MetaDataCollections");
-              //  SqlCommand.CommandText = "use database vbsdb;" +
-                //    "CREATE TABLE  cs_table (id int(4))";
+               
+
+                for (Int32 i = 0; i < 5; i++)
+                {
+                    string command = "USE ferndb; CREATE table tl"+i.ToString()+"(id int(6));";
+                    MySqlCommand sqlCommand = new MySqlCommand(command, sqlConnection);
+                    sqlCommand.ExecuteNonQuery();
+                }
+
                 //DataTable table = conn.GetSchema("UDF");
-               // DisplayData(table);
+                // DisplayData(table);
 
-                SqlConnection.Close();
+                sqlConnection.Close();
             }
             catch (Exception ex)
             {
