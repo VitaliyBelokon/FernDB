@@ -73,18 +73,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnector.cs" />
+    <Compile Include="DbManager.cs" />
     <Compile Include="FernInterfaces.cs" />
-    <Compile Include="dbMAnager.cs">
+    <Compile Include="vfDbMessages.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dbMAnager.Designer.cs">
-      <DependentUpon>dbMAnager.cs</DependentUpon>
+    <Compile Include="vfDbMessages.Designer.cs">
+      <DependentUpon>vfDbMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vfMetaData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vfMetaData.Designer.cs">
+      <DependentUpon>vfMetaData.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="dbMAnager.resx">
-      <DependentUpon>dbMAnager.cs</DependentUpon>
+    <EmbeddedResource Include="vfDbMessages.resx">
+      <DependentUpon>vfDbMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vfMetaData.resx">
+      <DependentUpon>vfMetaData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
